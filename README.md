@@ -22,6 +22,7 @@ The analysis focuses on the following questions:
 
 - **SQL (SQLite)** – Data querying and analysis
 - **Tableau** – Interactive dashboard development and data visualization
+- **Excel** – Data profiling and exploratory analysis
 - **Visual Studio Code** – SQL development and project organization
 - **GitHub** – Version control and project documentation
 
@@ -35,58 +36,77 @@ The analysis focuses on the following questions:
 
 - Sales had the highest departmental attrition rate at **20.6%**.
 - Sales Representatives had the highest job-role attrition rate at **39.8%**.
-- Employees working overtime had a substantially higher attrition rate (**30.5%**) than employees who did not work overtime (**10.4%**).
+- Employees working overtime had an attrition rate of **30.5%**, compared with **10.4%** for employees who did not work overtime.
 - Single employees had the highest attrition rate by marital status at **25.5%**.
 - Employees with **0–4 years of tenure** had an attrition rate of **24.3%**, indicating elevated turnover among newer employees.
-- The lowest monthly income group ($1,000–$4,999) had an attrition rate of **21.8%**.
+- Employees earning between **$1,000 and $4,999 per month** had an attrition rate of **21.8%**.
+- Employees who worked overtime and had **0–4 years of tenure** experienced a **43.1% attrition rate**, substantially higher than the overall company attrition rate of 16.1%.
 
 ## Tableau Dashboard
 
 The interactive Tableau dashboard provides a consolidated view of employee attrition and allows users to explore how attrition varies across key workforce characteristics.
 
-![HR Analytics Dashboard](Images/HR_Analytics_Dashboard.png)
+The dashboard includes interactive filtering by department and job role, allowing users to analyze attrition patterns within specific employee segments.
+
+![HR Analytics Dashboard](Images/HR_Analytics_Dashboard.jpg)
+
+## Dashboard Features
+
+- Total Employees KPI
+- Employees Who Left KPI
+- Overall Attrition Rate KPI
+- Attrition by Department
+- Attrition by Overtime Status
+- Attrition by Job Role
+- Attrition by Marital Status
+- Attrition by Monthly Income
+- Attrition by Employee Tenure
+- Interactive Department filtering
+- Interactive Job Role filtering
+
+## SQL Analysis
+
+SQL queries were used to calculate and analyze employee attrition across multiple dimensions, including department, job role, overtime status, marital status, employee tenure, and monthly income.
+
+The SQL analysis also examined combined risk factors to identify employee groups experiencing particularly high attrition.
+
+The complete SQL analysis is available in:
+
+- `SQL/queries.sql` – SQL queries used for the analysis
+- `SQL/SQL_Results.md` – Documentation of SQL findings and results
 
 ## Project Structure
 
 HR-Analytics-Dashboard/
-- Data/
-  - Raw/
-  - Cleaned/
-- Documentation/
-  - BusinessProblem.md
-  - Findings.md
-  - ProjectNotes.md
-- Images/
-  - HR_Analytics_Dashboard.png
-- SQL/
-  - hr_analytics.db
-  - queries.sql
-  - SQL_Results.md
-- Tableau/
-  - HR_Analytics_Dashboard.twbx
-- README.md
 
-## SQL Analysis
+- `Data/`
+  - `Raw/` – Original HR attrition dataset
+  - `Cleaned/` – Cleaned and prepared datasets
+- `Documentation/` – Project documentation and analysis notes
+- `Images/`
+  - `HR_Analytics_Dashboard.jpg` – Final Tableau dashboard image
+- `SQL/`
+  - `hr_analytics.db` – SQLite database
+  - `queries.sql` – SQL analysis queries
+  - `SQL_Results.md` – SQL analysis results and findings
+- `Tableau/`
+  - `HR Analytics Dashboard.twbx` – Tableau packaged workbook
+- `README.md` – Project overview and documentation
 
-SQL queries were used to calculate and analyze employee attrition across multiple dimensions, including department, job role, overtime status, marital status, tenure, and monthly income.
+## Business Recommendations
 
-The complete SQL analysis is available in `SQL/queries.sql`, with query results documented in `SQL/SQL_Results.md`.
+Based on the analysis, organizations seeking to reduce employee turnover should consider:
 
-## Dashboard Features
-
-The Tableau dashboard includes:
-
-- Total employee KPI
-- Employees who left KPI
-- Overall attrition rate KPI
-- Attrition by department
-- Attrition by job role
-- Attrition by overtime status
-- Attrition by marital status
-- Attrition by tenure
-- Attrition by monthly income
-- Interactive chart filtering
+- Monitoring workloads and reducing excessive overtime, particularly among newer employees.
+- Developing targeted retention strategies for high-turnover roles such as Sales Representatives.
+- Strengthening onboarding, engagement, and career-development programs for employees in their first few years with the company.
+- Reviewing compensation and advancement opportunities for lower-income employee groups.
+- Using workforce analytics to proactively identify employee segments with multiple attrition risk factors.
 
 ## Conclusion
 
-The analysis indicates that employee attrition is particularly concentrated among Sales Representatives, employees working overtime, newer employees, single employees, and employees in lower income groups. These findings suggest that organizations could focus retention efforts on workload management, early-career employee engagement, compensation, and high-turnover job roles.
+The analysis identified several workforce characteristics associated with elevated employee attrition. Overtime, early employee tenure, job role, and income level emerged as important factors in understanding turnover patterns.
+
+The combination of overtime and early tenure was particularly notable, with employees working overtime during their first four years at the company experiencing a **43.1% attrition rate**.
+
+By combining SQL analysis with an interactive Tableau dashboard, this project demonstrates how workforce data can be transformed into actionable insights that support employee retention and workforce planning.
