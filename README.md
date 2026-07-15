@@ -46,7 +46,11 @@ The analysis focuses on the following questions:
 
 The interactive Tableau dashboard provides a consolidated view of employee attrition and allows users to explore how attrition varies across key workforce characteristics.
 
-The dashboard includes interactive filtering by department and job role, allowing users to analyze attrition patterns within specific employee segments.
+The dashboard includes interactive filtering by department and job role, allowing users to analyze attrition patterns within specific employee segments. 
+
+### Live Interactive Dashboard
+
+[View the interactive HR Analytics Dashboard on Tableau Public](https://public.tableau.com/app/profile/ansh.patel4476/viz/HRAnalyticsDashboard_17841540192660/Dashboard1?publish=yes)
 
 ![HR Analytics Dashboard](Images/HR_Analytics_Dashboard.jpg)
 
